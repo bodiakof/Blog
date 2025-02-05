@@ -14,7 +14,8 @@
   {% if post_list %}
     {% if author_id %}
       <div class="post-preview" style="text-align: center">
-        <a><h3 class="post-subtitle">Posts by {{ post_list.0.owner.username }}</h3></a><hr class="my-4" />
+        <a><h3 class="post-subtitle">Posts by {{ post_list.0.owner.username }}</h3></a>
+        <hr class="my-4"/>
       </div>
     {% endif %}
 
@@ -34,13 +35,13 @@
         {% if post.tags.all %}
           <p><strong>Tags:</strong>
             {% for tag in post.tags.all %}
-              <a href="{% url 'tagged-posts' tag.slug %}" class="badge bg-secondary">{{ tag }}</a>
+              <a href="{% url 'blog:tagged-posts' slug=tag.slug %}" class="badge bg-secondary">{{ tag }}</a>
             {% endfor %}
           </p>
         {% endif %}
 
       </div>
-      <hr class="my-4" />
+      <hr class="my-4"/>
     {% endfor %}
   {% else %}
     <p>There are no posts so far...</p>
