@@ -34,7 +34,7 @@ class Comment(models.Model):
         related_name="comments"
     )
     post = models.ForeignKey(
-        Post,
+        "blog_app.Post",
         on_delete=models.CASCADE,
         related_name="comments"
     )
@@ -47,3 +47,22 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"{self.content} ({self.user} - {self.post})"
+
+
+class Like(models.Model):
+    user = models.ForeignKey(
+        get_user_model(),
+        on_delete=models.CASCADE,
+        related_name="likes"
+    )
+    post = models.ForeignKey(
+        "blog_app.Post",
+        on_delete=models.CASCADE,
+        related_name="likes"
+    )
+
+    class Meta:
+        unique_together = ("user", "post")
+
+    def __str__(self):
+        return f"{self.user} liked {self.post}"

@@ -1,12 +1,31 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import QuerySet
 from django.forms import ModelForm
-from django.http import HttpResponse
-from django.urls import reverse_lazy
-from django.views import generic
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import get_object_or_404
+from django.urls import reverse_lazy, reverse
+from django.views import generic, View
+from django.views.generic import CreateView
 
-from .forms import CommentForm
-from .models import Post, Comment
+from blog_app.forms import CommentForm, CustomUserCreationForm
+from blog_app.models import Post, Comment, Like
+
+
+class RegisterView(CreateView):
+    form_class = CustomUserCreationForm
+    template_name = "registration/register.html"
+    success_url = reverse_lazy("blog:home")
+
+
+class LikePostView(LoginRequiredMixin, View):
+    def post(self, request, pk, *args, **kwargs):
+        post = get_object_or_404(Post, pk=pk)
+        like, created = Like.objects.get_or_create(user=request.user, post=post)
+
+        if not created:
+            like.delete()
+
+        return HttpResponseRedirect(reverse("blog:post-detail", kwargs={"pk": pk}))
 
 
 class PostListView(generic.ListView):
@@ -35,7 +54,7 @@ class UserPostListView(generic.ListView):
 class PostDetailView(generic.DetailView):
     model = Post
     queryset = (
-        Post.objects.prefetch_related("comments__user")
+        Post.objects.prefetch_related("comments__user", "likes")
     )
     template_name = "blog/post_detail.html"
 
