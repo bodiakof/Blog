@@ -1,0 +1,5 @@
+django==4.1
+flake8==5.0.4
+django-crispy-forms==1.14.0
+crispy_bootstrap4
+crispy_forms

@@ -1,21 +1,23 @@
 from django.contrib import admin
-from .models import Post, Comment
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
+
+
+from blog_app.models import User, Post, Comment
+
+
+@admin.register(User)
+class CustomUserAdmin(BaseUserAdmin):
+    search_fields = ["username", "email"]
+    list_display = ["username", "email", "first_name", "last_name"]
 
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ["title", "slug", "author", "publish", "status"]
-    list_filter = ["status", "created", "publish", "author"]
-    search_fields = ["title", "body"]
-    prepopulated_fields = {"slug": ("title",)}
-    raw_id_fields = ["author"]
-    date_hierarchy = "publish"
-    ordering = ["status", "publish"]
-    show_facets = admin.ShowFacets.ALWAYS
+    search_fields = ["title", "owner__username"]
+    list_display = ["title", "owner", "created_time"]
 
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ["name", "email", "post", "created", "active"]
-    list_filter = ["active", "created", "updated"]
-    search_fields = ["name", "email", "body"]
+    search_fields = ["content", "post__title", "user__username"]
+    list_display = ["user", "post", "content", "created_time"]
