@@ -15,6 +15,7 @@ class CustomUserAdmin(BaseUserAdmin):
 class PostAdmin(admin.ModelAdmin):
     search_fields = ["title", "owner__username"]
     list_display = ["title", "owner", "created_time"]
+    filter_horizontal = ("tags",)
 
 
 @admin.register(Comment)

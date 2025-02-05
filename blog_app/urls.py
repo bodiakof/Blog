@@ -11,7 +11,7 @@ from blog_app.views import (
     CommentCreateView,
     CommentUpdateView,
     CommentDeleteView,
-    LikePostView,
+    LikePostView, TaggedPostListView,
 )
 
 app_name = "blog"
@@ -60,5 +60,14 @@ urlpatterns = [
         CommentDeleteView.as_view(),
         name="comment-delete",
     ),
-    path("post/<int:pk>/like/", LikePostView.as_view(), name="post-like")
+    path(
+        "post/<int:pk>/like/",
+        LikePostView.as_view(),
+        name="post-like"
+    ),
+path(
+    "tag/<slug:slug>/",
+    TaggedPostListView.as_view(),
+    name="tagged-posts"
+),
 ]

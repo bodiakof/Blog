@@ -6,6 +6,7 @@ from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy, reverse
 from django.views import generic, View
 from django.views.generic import CreateView
+from taggit.models import Tag
 
 from blog_app.forms import CommentForm, CustomUserCreationForm
 from blog_app.models import Post, Comment, Like
@@ -54,7 +55,7 @@ class UserPostListView(generic.ListView):
 class PostDetailView(generic.DetailView):
     model = Post
     queryset = (
-        Post.objects.prefetch_related("comments__user", "likes")
+        Post.objects.prefetch_related("comments__user", "likes", "tags")
     )
     template_name = "blog/post_detail.html"
 
@@ -142,3 +143,19 @@ class CommentDeleteView(LoginRequiredMixin, generic.DeleteView):
             "blog:comment-list",
             kwargs={"pk": self.object.post.pk}
         )
+
+
+class TaggedPostListView(generic.ListView):
+    model = Post
+    template_name = "blog/post_list.html"
+    context_object_name = "post_list"
+
+    def get_queryset(self) -> QuerySet:
+        tag_slug = self.kwargs.get("slug")
+        tag = get_object_or_404(Tag, slug=tag_slug)
+        return Post.objects.filter(tags__in=[tag])
+
+    def get_context_data(self, **kwargs) -> dict:
+        context = super().get_context_data(**kwargs)
+        context["tag"] = get_object_or_404(Tag, slug=self.kwargs.get("slug"))
+        return context

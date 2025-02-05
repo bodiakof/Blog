@@ -1,6 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from taggit.managers import TaggableManager
 
 
 class User(AbstractUser):
@@ -19,6 +20,7 @@ class Post(models.Model):
     description = models.CharField(max_length=255, default="")
     content = models.TextField()
     created_time = models.DateTimeField(auto_now_add=True)
+    tags = TaggableManager()
 
     def __str__(self):
         return self.title

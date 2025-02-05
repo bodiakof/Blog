@@ -10,23 +10,35 @@
       Add post +
     </a>
   {% endif %}
+
   {% if post_list %}
     {% if author_id %}
-    <div class="post-preview" style="text-align: center">
-      <a><h3 class="post-subtitle">Posts by {{ post_list.0.owner.username }}</h3></a><hr class="my-4" />
-    </div>
+      <div class="post-preview" style="text-align: center">
+        <a><h3 class="post-subtitle">Posts by {{ post_list.0.owner.username }}</h3></a><hr class="my-4" />
+      </div>
     {% endif %}
+
     {% for post in post_list %}
       <div class="post-preview">
-        <a href="{% url "blog:post-detail" post.id %}">
+        <a href="{% url 'blog:post-detail' post.id %}">
           <h2 class="post-title">{{ post.title|title }}</h2>
           <h3 class="post-subtitle">{{ post.description }}</h3>
         </a>
         <p class="post-meta">
           Posted by
-          <a href="{% url "blog:user-post-list" user_pk=post.owner.id %}">{{ post.owner }}</a>
+          <a href="{% url 'blog:user-post-list' user_pk=post.owner.id %}">{{ post.owner }}</a>
           on {{ post.created_time|date:"d F Y" }}
         </p>
+
+        <!-- Tags Section -->
+        {% if post.tags.all %}
+          <p><strong>Tags:</strong>
+            {% for tag in post.tags.all %}
+              <a href="{% url 'tagged-posts' tag.slug %}" class="badge bg-secondary">{{ tag }}</a>
+            {% endfor %}
+          </p>
+        {% endif %}
+
       </div>
       <hr class="my-4" />
     {% endfor %}

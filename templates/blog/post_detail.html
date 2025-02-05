@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% load crispy_forms_filters %}
 
 {% block title %}
   <title>Blog - {{ post.title|title }}</title>
@@ -40,6 +39,15 @@
       <span style="font-weight: normal;">({{ post.likes.count }})</span>
     </button>
   </form>
+
+  <!-- Tags Section -->
+  {% if post.tags.all %}
+    <p><strong>Tags:</strong>
+      {% for tag in post.tags.all %}
+        <a href="{% url 'tagged-posts' tag.slug %}" class="badge bg-secondary">{{ tag }}</a>
+      {% endfor %}
+    </p>
+  {% endif %}
 
   <!-- Comments Section -->
   {% if post.comments %}
