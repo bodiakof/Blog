@@ -32,13 +32,13 @@ class LikePostView(LoginRequiredMixin, View):
 class PostListView(generic.ListView):
     model = Post
     queryset = Post.objects.select_related("owner")
-    paginate_by = 5
+    paginate_by = 3
     template_name = "blog/post_list.html"
 
 
 class UserPostListView(generic.ListView):
     model = Post
-    paginate_by = 5
+    paginate_by = 3
     template_name = "blog/post_list.html"
 
     def get_context_data(self, **kwargs) -> dict:

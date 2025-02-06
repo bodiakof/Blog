@@ -5,21 +5,21 @@
 {% endblock %}
 
 {% block header %}
-<div class="post-heading">
-  <h1>{{ post.title|title }}</h1>
-  <h2 class="subheading">{{ post.description }}</h2>
-  <span class="meta">
+  <div class="post-heading">
+    <h1>{{ post.title|title }}</h1>
+    <h2 class="subheading">{{ post.description }}</h2>
+    <span class="meta">
     Posted by
     <a href="{% url 'blog:user-post-list' user_pk=post.owner.id %}">{{ post.owner }}</a>
     on {{ post.created_time|date:"d F Y" }}
   </span>
-</div>
+  </div>
 
-{% if user.is_authenticated and post.owner == user %}
-  <br>
-  <a class="btn btn-success btn-sm" href="{% url 'blog:post-update' pk=post.id %}">Update</a>
-  <a class="btn btn-danger btn-sm" href="{% url 'blog:post-delete' pk=post.id %}">Delete</a>
-{% endif %}
+  {% if user.is_authenticated and post.owner == user %}
+    <br>
+    <a class="btn btn-success btn-sm" href="{% url 'blog:post-update' pk=post.id %}">Update</a>
+    <a class="btn btn-danger btn-sm" href="{% url 'blog:post-delete' pk=post.id %}">Delete</a>
+  {% endif %}
 {% endblock %}
 
 {% block content %}
@@ -30,7 +30,8 @@
   <!-- Like Button -->
   <form action="{% url 'blog:post-like' post.pk %}" method="post">
     {% csrf_token %}
-    <button type="submit" class="btn btn-primary" style="background: transparent; border: none; color: black; font-size: 17px;">
+    <button type="submit" class="btn btn-primary"
+            style="background: transparent; border: none; color: black; font-size: 17px;">
       {% if user in post.likes.all %}
         Unlike
       {% else %}
@@ -44,20 +45,20 @@
   {% if post.tags.all %}
     <p><strong>Tags:</strong>
       {% for tag in post.tags.all %}
-        <a href="{% url 'tagged-posts' tag.slug %}" class="badge bg-secondary">{{ tag }}</a>
+        <a href="{% url 'blog:tagged-posts' tag.slug %}" class="badge bg-secondary">{{ tag }}</a>
       {% endfor %}
     </p>
   {% endif %}
 
   <!-- Comments Section -->
   {% if post.comments %}
-  <div id="comments">
-    {% with post.comments as comment_list %}
-      {% include "blog/comment_list.html" %}
+    <div id="comments">
+      {% with post.comments as comment_list %}
+        {% include "blog/comment_list.html" %}
+      {% endwith %}
+    </div>
+    {% with post.id as post_id %}
+      {% include "blog/comment_form.html" %}
     {% endwith %}
-  </div>
-  {% with post.id as post_id %}
-    {% include "blog/comment_form.html" %}
-  {% endwith %}
   {% endif %}
 {% endblock %}
