@@ -65,9 +65,9 @@ urlpatterns = [
         LikePostView.as_view(),
         name="post-like"
     ),
-path(
-    "tag/<slug:slug>/",
-    TaggedPostListView.as_view(),
-    name="tagged-posts"
-),
+    path(
+        "tag/<slug:slug>/",
+        TaggedPostListView.as_view(),
+        name="tagged-posts"
+    )
 ]

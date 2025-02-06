@@ -21,12 +21,18 @@ class RegisterView(CreateView):
 class LikePostView(LoginRequiredMixin, View):
     def post(self, request, pk, *args, **kwargs):
         post = get_object_or_404(Post, pk=pk)
-        like, created = Like.objects.get_or_create(user=request.user, post=post)
+        like, created = Like.objects.get_or_create(
+            user=request.user,
+            post=post
+        )
 
         if not created:
             like.delete()
 
-        return HttpResponseRedirect(reverse("blog:post-detail", kwargs={"pk": pk}))
+        return HttpResponseRedirect(
+            reverse("blog:post-detail",
+                    kwargs={"pk": pk})
+        )
 
 
 class PostListView(generic.ListView):
