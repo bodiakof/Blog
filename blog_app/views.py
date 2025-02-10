@@ -2,7 +2,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import QuerySet
 from django.forms import ModelForm
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse_lazy, reverse
 from django.views import generic, View
 from django.views.generic import CreateView
@@ -119,13 +119,13 @@ class CommentCreateView(LoginRequiredMixin, generic.CreateView):
         comment.user = self.request.user
         comment.post = Post.objects.get(pk=post_id)
         comment.save()
-        return super().form_valid(form)
+
+        self.object = comment
+
+        return redirect(self.get_success_url())
 
     def get_success_url(self) -> str:
-        return reverse_lazy(
-            "blog:comment-list",
-            kwargs={"pk": self.object.post.pk}
-        )
+        return reverse_lazy("blog:post-detail", kwargs={"pk": self.object.post.pk})
 
 
 class CommentUpdateView(LoginRequiredMixin, generic.UpdateView):
