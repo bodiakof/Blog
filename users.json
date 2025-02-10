@@ -1,0 +1,92 @@
+[
+  {
+    "model": "blog_app.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$gPcXjg6wieDvly6MGZHbCz$oOCji6tEg6x+zqPe0odOqB9+wNFca/3FniOlBji1Q58=",
+        "last_login": "2025-02-10T12:13:33.201Z",
+        "is_superuser": false,
+        "username": "JohnNolan",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-02-10T07:33:56.794Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "blog_app.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$upgMgJ2USs9pRU7zH856RC$kwEidybqu2uCjhxXS6pMYsG9xBzyZiPahQTUN0Wb1F8=",
+        "last_login": "2025-02-10T12:30:58.488Z",
+        "is_superuser": false,
+        "username": "QuigleySmitty",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-02-10T07:35:39.150Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "blog_app.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$p7ziFttwIMnSTzmiJreqjg$Zidz5m5i0Bq5oHGq8S8GPMEj9yOgzCjNmNF6GZRNG5c=",
+        "last_login": "2025-02-10T12:29:14.701Z",
+        "is_superuser": false,
+        "username": "LucyChen",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-02-10T07:36:48.991Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "blog_app.user",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$MUqDrq73I7vCKQeKEP52iZ$wMVRsQYfywKFfsMAx4CGUG19Iy3f7hwAR3gMKFekCEw=",
+        "last_login": "2025-02-10T07:52:59.064Z",
+        "is_superuser": false,
+        "username": "JohnDoe",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-02-10T07:42:13.658Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "blog_app.user",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$y5REaPQ1OyfcOIXGRVKm1R$nglvZBVB58bRKaJau6o/IB4EUsFKTbL0XJhFcLiejf0=",
+        "last_login": "2025-02-10T12:35:48.703Z",
+        "is_superuser": false,
+        "username": "JaneDoe",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-02-10T07:43:45.085Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

@@ -1,0 +1,216 @@
+[
+{
+    "model": "blog_app.post",
+    "pk": 6,
+    "fields": {
+        "owner": 4,
+        "title": "The Industrial Revolution and Its Impact",
+        "description": "An overview of the Industrial Revolution, its causes, effects, and its lasting impact on society.",
+        "content": "The Industrial Revolution, which began in the late 18th century in Britain, marked a turning point in human history. It saw the shift from agrarian economies to industrialized societies, driven by innovations like the steam engine, spinning jenny, and mechanized looms. This transformation led to mass production, urbanization, and the rise of factory work. While the revolution brought economic growth and technological advancement, it also resulted in harsh working conditions, environmental degradation, and significant social changes. The Industrial Revolution set the stage for the modern world as we know it today.",
+        "created_time": "2025-02-10T11:49:55.053Z"
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 7,
+    "fields": {
+        "owner": 4,
+        "title": "The Magic of Stop-Motion Animation",
+        "description": "A look at the art of stop-motion animation and its enduring appeal in filmmaking.",
+        "content": "Stop-motion animation is a filmmaking technique in which each frame is captured individually, with objects or puppets slightly moved between shots to create the illusion of motion. This labor-intensive process requires patience and precision but results in a unique, captivating style of animation. Popularized by films like 'The Nightmare Before Christmas' and 'Coraline,' stop-motion offers a distinct aesthetic that cannot be replicated by computer-generated imagery (CGI). The technique continues to be used in both feature films and short films, showcasing its timeless appeal in the world of animation.",
+        "created_time": "2025-02-10T11:52:17.948Z"
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 8,
+    "fields": {
+        "owner": 6,
+        "title": "The Role of Emotions in Human Behavior",
+        "description": "An exploration of how emotions shape human behavior and decision-making processes.",
+        "content": "Emotions play a crucial role in human behavior, influencing our decisions, actions, and interactions with others. Psychologists have long studied how emotions like fear, joy, anger, and sadness affect our choices. For example, fear can trigger fight-or-flight responses, while joy can lead to positive social interactions. Emotional regulation is essential for mental health, and understanding how emotions work can help individuals navigate complex social situations. Emotions are not just reactions but are deeply tied to our thoughts, experiences, and perceptions of the world around us.",
+        "created_time": "2025-02-10T11:53:09.777Z"
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 10,
+    "fields": {
+        "owner": 5,
+        "title": "The Art of Landscape Photography",
+        "description": "An introduction to landscape photography, focusing on techniques and the appreciation of nature.",
+        "content": "Landscape photography captures the beauty of nature, from sweeping vistas to intimate scenes of forests and mountains. This genre of photography requires patience, an eye for composition, and an understanding of light. The changing qualities of light, especially during the golden hours of sunrise and sunset, can transform a simple landscape into a stunning image. Modern landscape photographers use both traditional cameras and drones to capture unique perspectives, creating images that inspire viewers to appreciate the natural world. Landscape photography is not just about beauty but also about capturing the essence of a place.",
+        "created_time": "2025-02-10T11:55:16.965Z"
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 11,
+    "fields": {
+        "owner": 5,
+        "title": "The Rise of Virtual Reality in Gaming",
+        "description": "A look at how virtual reality is transforming the gaming industry and its potential for future applications.",
+        "content": "Virtual reality (VR) has revolutionized the gaming industry, offering players an immersive experience like never before. By using a VR headset, players can interact with 3D environments and characters in a way that traditional gaming systems cannot replicate. VR gaming is still in its early stages but has already produced groundbreaking titles such as 'Beat Saber' and 'Half-Life: Alyx.' As the technology advances, VR is expected to play a significant role in gaming, education, and even healthcare, transforming how we interact with digital content.",
+        "created_time": "2025-02-10T11:56:19.542Z"
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 12,
+    "fields": {
+        "owner": 6,
+        "title": "The History of the Internet",
+        "description": "A brief history of the internet, from its early days as ARPANET to its role in modern society.",
+        "content": "The internet, as we know it today, began as a project called ARPANET in the late 1960s, funded by the U.S. Department of Defense. Initially used to connect academic and military institutions, it quickly grew to include public networks. By the 1990s, the World Wide Web emerged, bringing user-friendly browsers and websites into the spotlight. As the internet expanded, it revolutionized communication, commerce, education, and entertainment, eventually becoming an integral part of daily life. Today, the internet connects billions of people and continues to evolve at a rapid pace, shaping the future of global society.",
+        "created_time": "2025-02-10T11:58:38.644Z"
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 13,
+    "fields": {
+        "owner": 5,
+        "title": "The Golden Age of Hollywood",
+        "description": "An exploration of Hollywood's Golden Age, a period when the film industry dominated global culture.",
+        "content": "The Golden Age of Hollywood, roughly spanning from the 1930s to the 1960s, marked a time when the American film industry was at its peak in both production and popularity. Studios like MGM, Warner Bros., and Paramount produced iconic films that are still celebrated today. Stars like Marilyn Monroe, Humphrey Bogart, and Audrey Hepburn became household names, and directors such as Alfred Hitchcock and Frank Capra shaped the narrative and technical aspects of filmmaking. During this era, cinema was a major cultural force, with films influencing public life and societal norms.",
+        "created_time": "2025-02-10T11:59:33.327Z"
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 14,
+    "fields": {
+        "owner": 6,
+        "title": "The Psychology of Decision Making",
+        "description": "An overview of the psychological factors that influence decision-making and how to make better choices.",
+        "content": "Decision-making is a complex process that involves both conscious and unconscious thought. The study of how we make decisions involves understanding cognitive biases, emotions, and social influences. Psychologists have identified patterns in decision-making that can lead to poor choices, such as overconfidence, the sunk cost fallacy, and herd behavior. By understanding these psychological factors, individuals can improve their decision-making skills and make more rational choices, especially in high-stakes situations. The study of decision-making has broad applications, from business to personal life.",
+        "created_time": "2025-02-10T12:00:17.832Z"
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 15,
+    "fields": {
+        "owner": 4,
+        "title": "The Evolution of Jazz Music",
+        "description": "A brief history of jazz, from its roots in New Orleans to its evolution into a diverse and influential genre.",
+        "content": "Jazz, born in the early 20th century in New Orleans, combines African rhythms, blues, and European musical elements. Its improvisational nature and syncopated rhythms made it a revolutionary genre, breaking from traditional European music structures. Early pioneers like Louis Armstrong, Duke Ellington, and Billie Holiday laid the foundation for jazz, which evolved into various subgenres, including bebop, cool jazz, and fusion. Today, jazz continues to influence a wide range of music and remains an essential part of the global music scene, with new artists pushing its boundaries.",
+        "created_time": "2025-02-10T12:01:16.302Z"
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 16,
+    "fields": {
+        "owner": 5,
+        "title": "The Impact of Digital Photography",
+        "description": "How digital photography has transformed the art of capturing and sharing images in the modern world.",
+        "content": "Digital photography has transformed the way we capture and share images. The shift from film to digital allowed for instant viewing, editing, and sharing, revolutionizing both professional and amateur photography. Digital cameras have become more accessible, with smartphones now capable of taking high-quality photos. Photography has also become more integrated into social media platforms, where images are shared globally in real-time. While some traditionalists still prefer film for its aesthetic, digital photography has opened up new creative possibilities and changed the way we perceive and interact with visual content.",
+        "created_time": "2025-02-10T12:02:03.123Z"
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 20,
+    "fields": {
+        "owner": 6,
+        "title": "Understanding Popular Psychology",
+        "description": "A look into popular psychology, focusing on self-help concepts and their application in everyday life.",
+        "content": "Popular psychology explores the psychological theories and practices that are accessible and applicable to everyday life. Often focusing on self-help, personal development, and mental health, this field aims to provide practical advice for improving well-being. Topics such as emotional intelligence, mindfulness, and cognitive behavioral techniques have gained significant attention. While not always based on rigorous scientific research, popular psychology resonates with a broad audience and helps individuals navigate the complexities of human behavior.",
+        "created_time": "2025-02-10T12:08:05.403Z"
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 21,
+    "fields": {
+        "owner": 4,
+        "title": "The Evolution of Music Genres",
+        "description": "A short history of how music genres have evolved over time, influenced by societal and cultural changes.",
+        "content": "Music has undergone significant transformation over the centuries, with genres evolving as a reflection of cultural, technological, and social changes. Classical music laid the foundation for later developments, while genres like jazz, rock, and hip hop emerged as responses to new sounds and societal shifts. Today, genres continue to blend and evolve, with electronic dance music (EDM) becoming a dominant force. The history of music genres is a testament to the creative ways humans adapt to and express their experiences through sound.",
+        "created_time": "2025-02-10T12:08:54.141Z"
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 22,
+    "fields": {
+        "owner": 5,
+        "title": "The Art of Photography",
+        "description": "A look at how photography evolved from a technical process to a creative art form, influencing visual culture.",
+        "content": "Photography has transformed from a technical pursuit to an artistic medium, capturing the world through the lens in unique ways. The invention of the camera in the 19th century revolutionized the art world, allowing artists to preserve moments in time with unprecedented precision. As technology advanced, so did the potential for creativity, from black-and-white film to digital photography. Today, photography is a widely practiced art form that ranges from photojournalism to fine art, offering countless ways to interpret the world visually.",
+        "created_time": "2025-02-10T12:09:52.093Z"
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 23,
+    "fields": {
+        "owner": 6,
+        "title": "Technologies Changing the World",
+        "description": "An overview of current technological advancements and how they are shaping the future of society.",
+        "content": "From the invention of the wheel to the development of the internet, technology has continually shaped human progress. In recent years, advancements like artificial intelligence (AI), quantum computing, and biotechnology have opened up new possibilities that were once unimaginable. These technologies are revolutionizing industries, improving lives, and presenting new ethical dilemmas. As technology continues to evolve, the potential for innovation and disruption grows, signaling a future where human capabilities and technology will be more intertwined than ever before.",
+        "created_time": "2025-02-10T12:10:49.220Z"
+    }
+},
+{
+    "model": "blog_app.comment",
+    "pk": 15,
+    "fields": {
+        "user": 4,
+        "post": 22,
+        "created_time": "2025-02-10T12:14:32.835Z",
+        "content": "Nice!"
+    }
+},
+{
+    "model": "blog_app.comment",
+    "pk": 17,
+    "fields": {
+        "user": 6,
+        "post": 21,
+        "created_time": "2025-02-10T12:29:34.899Z",
+        "content": "Amazing!"
+    }
+},
+{
+    "model": "blog_app.comment",
+    "pk": 18,
+    "fields": {
+        "user": 6,
+        "post": 6,
+        "created_time": "2025-02-10T12:30:03.889Z",
+        "content": "I didn't know that!"
+    }
+},
+{
+    "model": "blog_app.comment",
+    "pk": 20,
+    "fields": {
+        "user": 5,
+        "post": 22,
+        "created_time": "2025-02-10T12:32:33.223Z",
+        "content": "What can I say, I know some stuff about photography."
+    }
+},
+{
+    "model": "blog_app.comment",
+    "pk": 22,
+    "fields": {
+        "user": 5,
+        "post": 13,
+        "created_time": "2025-02-10T12:34:31.236Z",
+        "content": "Now you know everything about Hollywood's Golden Age."
+    }
+},
+{
+    "model": "blog_app.comment",
+    "pk": 23,
+    "fields": {
+        "user": 5,
+        "post": 23,
+        "created_time": "2025-02-10T12:35:11.279Z",
+        "content": "I don't trust these AI things..."
+    }
+}
+]
