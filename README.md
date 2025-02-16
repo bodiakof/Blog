@@ -27,6 +27,8 @@ n1Xk6n7njo`
 
 To deploy the project on your PC follow the instructions [here](SETUP.md).
 
+# Some screenshots
+
 ![1.jpg](screenshots/1.png)
 
 ![2.jpg](screenshots/2.png)
