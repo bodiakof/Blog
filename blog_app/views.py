@@ -6,6 +6,7 @@ from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse_lazy, reverse
 from django.views import generic, View
 from django.views.generic import CreateView
+
 from taggit.models import Tag
 
 from blog_app.forms import CommentForm, CustomUserCreationForm

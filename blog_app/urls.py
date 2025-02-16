@@ -11,7 +11,8 @@ from blog_app.views import (
     CommentCreateView,
     CommentUpdateView,
     CommentDeleteView,
-    LikePostView, TaggedPostListView,
+    LikePostView,
+    TaggedPostListView,
 )
 
 app_name = "blog"
